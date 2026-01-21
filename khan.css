@@ -1,0 +1,220 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =====================
+   APP WRAPPER
+===================== */
+.app-wrapper {
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    background: #020617;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* =====================
+   HEADER
+===================== */
+.main-header {
+    padding: 14px 16px;
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo .dot {
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #22c55e;
+}
+
+/* =====================
+   STATUS PILL
+===================== */
+#status-pill {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 999px;
+    background: #1e293b;
+}
+
+.status-idle {
+    color: #f87171;
+}
+
+.status-connected {
+    color: #22c55e;
+}
+
+/* =====================
+   CHAT AREA
+===================== */
+#chat-screen {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+}
+
+.msg-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* SYSTEM MESSAGE */
+.system-msg {
+    text-align: center;
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* USER MESSAGE */
+.msg.me {
+    align-self: flex-end;
+    background: #22c55e;
+    color: #020617;
+    padding: 8px 12px;
+    border-radius: 12px 12px 0 12px;
+    max-width: 75%;
+    font-size: 14px;
+}
+
+/* STRANGER MESSAGE */
+.msg.stranger {
+    align-self: flex-start;
+    background: #1e293b;
+    padding: 8px 12px;
+    border-radius: 12px 12px 12px 0;
+    max-width: 75%;
+    font-size: 14px;
+}
+
+/* =====================
+   INPUT AREA
+===================== */
+.input-container {
+    padding: 10px;
+    background: #020617;
+    border-top: 1px solid #1e293b;
+    display: flex;
+    gap: 8px;
+}
+
+.input-wrapper {
+    flex: 1;
+    display: flex;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    color: #e5e7eb;
+    outline: none;
+    font-size: 14px;
+}
+
+#message-input::placeholder {
+    color: #64748b;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.action-btn {
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* START / NEXT BUTTON */
+.action-btn.next {
+    background: #22c55e;
+    color: #020617;
+    padding: 0 16px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.action-btn.next:hover {
+    background: #16a34a;
+}
+
+/* SEND BUTTON */
+.action-btn.send {
+    width: 42px;
+    background: #22c55e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn.send svg {
+    width: 20px;
+    height: 20px;
+    fill: #020617;
+}
+
+.action-btn.send:hover {
+    background: #16a34a;
+}
+
+/* =====================
+   SCROLLBAR
+===================== */
+#chat-screen::-webkit-scrollbar {
+    width: 4px;
+}
+
+#chat-screen::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>StrangerChat | Anonymous</title>
+    <link rel="stylesheet" href="khan.css">
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <header class="main-header">
+            <div class="logo">
+                <span class="dot"></span>
+                <h1>Stranger<span>Chat</span></h1>
+            </div>
+            <div id="status-pill" class="status-idle">Disconnected</div>
+        </header>
+
+        <main id="chat-screen">
+            <div class="msg-container" id="chat-box">
+                <div class="system-msg">Press "Start" to match with a stranger</div>
+            </div>
+        </main>
+
+        <footer class="input-container">
+            <button id="next-btn" class="action-btn next">Start</button>
+            <div class="input-wrapper">
+                <input type="text" id="message-input" placeholder="Type something..." disabled>
+                <button id="send-btn" class="action-btn send" disabled>
+                    <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="khan.js"></script>
+</body>
+</html>
